@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import qualityPractices from '../data/quality';
+import { ArrowRight, BadgeCheck } from 'lucide-react';
 
 const Quality = () => {
   return (
@@ -49,8 +50,14 @@ const Quality = () => {
                   {item.number}
                 </span>
 
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F7F1E3] text-xl text-[#0B3D2E] transition-all duration-300 group-hover:bg-[#0B3D2E] group-hover:text-[#D9A441]">
-                  {item.icon}
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F7F1E3] text-[#0B3D2E] transition-all duration-300 group-hover:bg-[#0B3D2E] group-hover:text-[#D9A441]">
+                  {(() => {
+                    const Icon = item.icon;
+
+                    return (
+                      <Icon size={21} strokeWidth={1.8} aria-hidden="true" />
+                    );
+                  })()}
                 </span>
               </div>
 
@@ -98,10 +105,15 @@ const Quality = () => {
 
               <a
                 href="#contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#D9A441] px-6 py-3 font-semibold text-[#06291F] transition-colors hover:bg-[#E5B653]"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D9A441] px-6 py-3 font-semibold text-[#06291F] transition-colors hover:bg-[#E5B653]"
               >
                 Discuss Your Requirements
-                <span>→</span>
+                <ArrowRight
+                  size={16}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
               </a>
             </div>
 
@@ -119,7 +131,12 @@ const Quality = () => {
                 <div className="rounded-full border border-[#D9A441]/40 p-5 sm:p-8">
                   <div className="flex h-24 w-24 items-center justify-center rounded-full border border-[#D9A441]/60 text-center sm:h-32 sm:w-32">
                     <div>
-                      <span className="block text-3xl text-[#D9A441]">✦</span>
+                      <BadgeCheck
+                        size={30}
+                        strokeWidth={1.8}
+                        className="mx-auto text-[#D9A441]"
+                        aria-hidden="true"
+                      />
 
                       <span className="mt-2 block text-xs font-semibold uppercase tracking-[0.2em] text-[#F7F1E3]">
                         Quality

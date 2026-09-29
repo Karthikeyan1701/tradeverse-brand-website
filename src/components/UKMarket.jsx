@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe2, MapPin, Store } from 'lucide-react';
+import { ArrowRight, Globe2 } from 'lucide-react';
 import { ukBuyerTypes, ukMarketHighlights } from '../data/ukMarket';
 
 const buyerRows = [];
@@ -126,7 +126,7 @@ const UKMarket = () => {
                   <div className="relative flex-1">
                     <div className="border-t border-dashed border-[#D9A441]/60" />
 
-                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0B3D2E] px-2 text-sm text-[#D9A441]">
+                    <span className="absolute left-1/2 top-1/2 flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#D9A441]/30 bg-[#0B3D2E]">
                       <Globe2
                         size={14}
                         strokeWidth={1.8}
@@ -246,9 +246,15 @@ const UKMarket = () => {
 
           <a
             href="#contact"
-            className="mt-7 inline-flex rounded-full bg-[#0B3D2E] px-7 py-3 font-semibold text-[#F7F1E3] transition-colors hover:bg-[#06291F]"
+            className="group mt-7 inline-flex items-center rounded-full bg-[#0B3D2E] px-7 py-3 font-semibold text-[#F7F1E3] transition-colors hover:bg-[#06291F]"
           >
             Send Your Requirement
+            <ArrowRight
+              size={16}
+              strokeWidth={2}
+              aria-hidden="true"
+              className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+            />
           </a>
         </motion.div>
       </div>

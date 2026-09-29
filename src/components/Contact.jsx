@@ -1,18 +1,19 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { contactInfo, contactFields } from "../data/contact";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { contactInfo, contactFields } from '../data/contact';
+import { MapPin, Phone, Mail, ArrowRight, Check } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    country: "",
-    email: "",
-    phone: "",
-    product: "",
-    quantity: "",
-    destination: "",
-    message: "",
+    name: '',
+    company: '',
+    country: '',
+    email: '',
+    phone: '',
+    product: '',
+    quantity: '',
+    destination: '',
+    message: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -31,18 +32,14 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Enquiry submitted:", formData);
+    console.log('Enquiry submitted:', formData);
 
     setSubmitted(true);
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-[#06291F] py-20 sm:py-24 lg:py-32"
-    >
+    <section id="contact" className="bg-[#06291F] py-20 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -57,9 +54,7 @@ const Contact = () => {
 
           <h2 className="font-serif text-4xl font-semibold leading-tight text-[#F7F1E3] md:text-5xl">
             Let's Discuss Your
-            <span className="text-[#D9A441]">
-              {" "}Export Requirement.
-            </span>
+            <span className="text-[#D9A441]"> Export Requirement.</span>
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-[#C9D3CD]">
@@ -70,7 +65,6 @@ const Contact = () => {
 
         {/* Contact Layout */}
         <div className="mt-16 grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
-
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -80,7 +74,6 @@ const Contact = () => {
             className="flex flex-col justify-between rounded-2xl bg-[#0B3D2E] p-8 md:p-10"
           >
             <div>
-
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#D9A441]">
                 Business Enquiries
               </p>
@@ -88,9 +81,7 @@ const Contact = () => {
               <h3 className="mt-5 font-serif text-3xl font-semibold text-[#F7F1E3]">
                 TRADEVERSE
                 <br />
-                <span className="text-[#D9A441]">
-                  Import & Exports
-                </span>
+                <span className="text-[#D9A441]">Import & Exports</span>
               </h3>
 
               <p className="mt-6 leading-7 text-[#C9D3CD]">
@@ -100,11 +91,10 @@ const Contact = () => {
 
               {/* Contact Details */}
               <div className="mt-10 space-y-6">
-
                 {/* Location */}
                 <div className="flex gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#D9A441]/30 text-[#D9A441]">
-                    ◎
+                    <MapPin size={19} strokeWidth={1.8} aria-hidden="true" />
                   </div>
 
                   <div>
@@ -121,7 +111,7 @@ const Contact = () => {
                 {/* Phone */}
                 <div className="flex gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#D9A441]/30 text-[#D9A441]">
-                    ☎
+                    <Phone size={19} strokeWidth={1.8} aria-hidden="true" />
                   </div>
 
                   <div>
@@ -130,7 +120,7 @@ const Contact = () => {
                     </p>
 
                     <a
-                      href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                      href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
                       className="mt-1 block text-[#F7F1E3] transition-colors hover:text-[#D9A441]"
                     >
                       {contactInfo.phone}
@@ -142,7 +132,7 @@ const Contact = () => {
                 {contactInfo.email && (
                   <div className="flex gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#D9A441]/30 text-[#D9A441]">
-                      @
+                      <Mail size={19} strokeWidth={1.8} aria-hidden="true" />
                     </div>
 
                     <div>
@@ -159,7 +149,6 @@ const Contact = () => {
                     </div>
                   </div>
                 )}
-
               </div>
             </div>
 
@@ -182,12 +171,9 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="rounded-2xl bg-[#F7F1E3] p-8 md:p-10"
           >
-
             {!submitted ? (
               <form onSubmit={handleSubmit}>
-
                 <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
-
                   {contactFields.map((field) => (
                     <div key={field.id}>
                       <label
@@ -196,9 +182,7 @@ const Contact = () => {
                       >
                         {field.label}
                         {field.required && (
-                          <span className="ml-1 text-[#D9A441]">
-                            *
-                          </span>
+                          <span className="ml-1 text-[#D9A441]">*</span>
                         )}
                       </label>
 
@@ -214,7 +198,6 @@ const Contact = () => {
                       />
                     </div>
                   ))}
-
                 </div>
 
                 {/* Message */}
@@ -240,12 +223,15 @@ const Contact = () => {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#0B3D2E] px-7 py-4 font-semibold text-[#F7F1E3] transition-colors hover:bg-[#06291F]"
+                  className="group mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#0B3D2E] px-7 py-4 font-semibold text-[#F7F1E3] transition-colors hover:bg-[#06291F]"
                 >
                   Submit Enquiry
-                  <span className="ml-2">
-                    →
-                  </span>
+                  <ArrowRight
+                    size={17}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                    className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                  />
                 </button>
 
                 <p className="mt-4 text-center text-xs leading-5 text-[#6B746E]">
@@ -253,7 +239,6 @@ const Contact = () => {
                   details for the purpose of responding to your business
                   requirement.
                 </p>
-
               </form>
             ) : (
               /* Success State */
@@ -263,7 +248,7 @@ const Contact = () => {
                 className="flex min-h-125 flex-col items-center justify-center text-center"
               >
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#0B3D2E] text-3xl text-[#D9A441]">
-                  ✓
+                  <Check size={32} strokeWidth={2} aria-hidden="true" />
                 </div>
 
                 <h3 className="mt-8 font-serif text-3xl font-semibold text-[#0B3D2E]">
@@ -271,8 +256,8 @@ const Contact = () => {
                 </h3>
 
                 <p className="mt-4 max-w-md leading-7 text-[#5E665F]">
-                  Thank you for sharing your requirements. Our team will
-                  review the information and coordinate the next steps.
+                  Thank you for sharing your requirements. Our team will review
+                  the information and coordinate the next steps.
                 </p>
 
                 <button
@@ -280,14 +265,18 @@ const Contact = () => {
                   onClick={() => setSubmitted(false)}
                   className="mt-8 font-semibold text-[#0B3D2E] transition-colors hover:text-[#D9A441]"
                 >
-                  Submit Another Enquiry →
+                  Submit Another Enquiry
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                    className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1"
+                  />
                 </button>
               </motion.div>
             )}
-
           </motion.div>
         </div>
-
       </div>
     </section>
   );

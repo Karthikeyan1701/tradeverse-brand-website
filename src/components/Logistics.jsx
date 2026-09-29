@@ -92,7 +92,12 @@ const Logistics = () => {
 
             <h3 className="mt-4 font-serif text-3xl font-semibold text-[#F7F1E3] md:text-4xl">
               India
-              <span className="mx-3 text-[#D9A441]">→</span>
+              <ArrowRight
+                size={18}
+                strokeWidth={2}
+                className="mx-3 inline-block text-[#D9A441]"
+                aria-hidden="true"
+              />
               United Kingdom
             </h3>
 
@@ -158,11 +163,11 @@ const Logistics = () => {
 
             <a
               href="#contact"
-              className="mt-8 inline-flex items-center gap-2 font-semibold text-[#0B3D2E] transition-colors hover:text-[#D9A441]"
+              className="group mt-8 inline-flex items-center gap-2 font-semibold text-[#0B3D2E] transition-colors hover:text-[#D9A441]"
             >
               Discuss Your Shipment
               <ArrowRight
-                size={17}
+                size={16}
                 strokeWidth={2}
                 aria-hidden="true"
                 className="transition-transform duration-300 group-hover:translate-x-1"
@@ -185,9 +190,15 @@ const Logistics = () => {
 
           <a
             href="#contact"
-            className="mt-6 inline-flex rounded-full bg-[#D9A441] px-7 py-3 font-semibold text-[#06291F] transition-colors hover:bg-[#E5B653]"
+            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#D9A441] px-7 py-3 font-semibold text-[#06291F] transition-colors hover:bg-[#E5B653]"
           >
             Send Your Requirement
+            <ArrowRight
+              size={16}
+              strokeWidth={2}
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
           </a>
         </motion.div>
       </div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { bulkOrderRequirements, bulkOrderBenefits } from '../data/bulkOrders';
+import { ArrowRight, Check } from 'lucide-react';
 
 const requirementRows = [];
 
@@ -75,8 +76,8 @@ const BulkOrders = () => {
                     key={benefit}
                     className="flex items-center gap-3 text-sm text-[#DDE5DF]"
                   >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#D9A441] text-xs font-bold text-[#06291F]">
-                      ✓
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#D9A441] text-[#06291F]">
+                      <Check size={14} strokeWidth={2.5} aria-hidden="true" />
                     </span>
 
                     {benefit}
@@ -115,20 +116,7 @@ const BulkOrders = () => {
                         duration: 0.5,
                         delay: (rowIndex * 2 + index) * 0.08,
                       }}
-                      className="
-        group grid
-        overflow-hidden
-        rounded-2xl
-        border border-[#0B3D2E]/10
-        bg-[#F7F1E3]
-        p-7
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-md
-        sm:row-span-4
-        sm:grid-rows-subgrid
-      "
+                      className="group grid overflow-hidden rounded-2xl border border-[#0B3D2E]/10 bg-[#F7F1E3] p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:row-span-4 sm:grid-rows-subgrid"
                     >
                       {/* Number + Icon */}
                       <div className="flex items-center justify-between">
@@ -191,10 +179,15 @@ const BulkOrders = () => {
 
             <a
               href="#contact"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-[#0B3D2E] px-7 py-3 font-semibold text-[#F7F1E3] transition-colors hover:bg-[#06291F]"
+              className="group inline-flex w-fit items-center gap-2 rounded-full bg-[#0B3D2E] px-7 py-3 font-semibold text-[#F7F1E3] transition-colors hover:bg-[#06291F]"
             >
               Send Your Requirement
-              <span>→</span>
+              <ArrowRight
+                size={16}
+                strokeWidth={2}
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
             </a>
           </div>
         </motion.div>

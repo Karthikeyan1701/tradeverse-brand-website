@@ -1,3 +1,12 @@
+import {
+  Handshake,
+  ClipboardCheck,
+  FileCheck,
+  PackageCheck,
+  ScanSearch,
+  Truck,
+} from "lucide-react";
+
 const qualityPractices = [
   {
     id: 1,
@@ -5,7 +14,7 @@ const qualityPractices = [
     title: "Supplier Coordination",
     description:
       "We coordinate with selected suppliers to understand product availability, specifications and sourcing requirements.",
-    icon: "◎",
+    icon: Handshake,
   },
   {
     id: 2,
@@ -13,7 +22,7 @@ const qualityPractices = [
     title: "Product Specifications",
     description:
       "Product specifications are reviewed according to buyer requirements, including grade, quantity, packaging and other agreed parameters.",
-    icon: "◇",
+    icon: ClipboardCheck,
   },
   {
     id: 3,
@@ -21,7 +30,7 @@ const qualityPractices = [
     title: "Quality Documentation",
     description:
       "Relevant quality and product documentation is coordinated based on the product, buyer requirements and applicable trade requirements.",
-    icon: "▤",
+    icon: FileCheck,
   },
   {
     id: 4,
@@ -29,7 +38,7 @@ const qualityPractices = [
     title: "Packaging & Handling",
     description:
       "Packaging and handling requirements are coordinated to help maintain product quality throughout the export process.",
-    icon: "□",
+    icon: PackageCheck,
   },
   {
     id: 5,
@@ -37,7 +46,7 @@ const qualityPractices = [
     title: "Traceability",
     description:
       "Batch or lot information is maintained where applicable to support product identification and shipment coordination.",
-    icon: "⌁",
+    icon: ScanSearch,
   },
   {
     id: 6,
@@ -45,7 +54,7 @@ const qualityPractices = [
     title: "Pre-Shipment Coordination",
     description:
       "Before shipment, product, packaging, documentation and logistics requirements are coordinated with the relevant parties.",
-    icon: "↗",
+    icon: Truck,
   },
 ];
 

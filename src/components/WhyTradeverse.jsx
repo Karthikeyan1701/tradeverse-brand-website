@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import whyTradeverse from "../data/whyTradeverse";
+import { motion } from 'framer-motion';
+import whyTradeverse from '../data/whyTradeverse';
 
 const WhyTradeverse = () => {
   return (
@@ -13,7 +13,6 @@ const WhyTradeverse = () => {
       <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full border border-[#D9A441]/10" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,9 +31,9 @@ const WhyTradeverse = () => {
           </h2>
 
           <p className="mt-6 text-lg leading-7 text-[#DDE5DF] sm:text-lg sm:leading-8">
-            International food trade requires more than sourcing products.
-            We coordinate the process from supplier selection to shipment with
-            a focus on dependable service and long-term business relationships.
+            International food trade requires more than sourcing products. We
+            coordinate the process from supplier selection to shipment with a
+            focus on dependable service and long-term business relationships.
           </p>
         </motion.div>
 
@@ -59,7 +58,13 @@ const WhyTradeverse = () => {
                 </span>
 
                 <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D9A441]/30 text-xl text-[#D9A441] transition-all duration-300 group-hover:border-[#D9A441] group-hover:bg-[#D9A441] group-hover:text-[#06291F]">
-                  {item.icon}
+                  {(() => {
+                    const Icon = item.icon;
+
+                    return (
+                      <Icon size={21} strokeWidth={1.8} aria-hidden="true" />
+                    );
+                  })()}
                 </span>
               </div>
 
@@ -91,7 +96,6 @@ const WhyTradeverse = () => {
             <span className="text-[#D9A441]"> we keep trade moving.</span>"
           </p>
         </motion.div>
-
       </div>
     </section>
   );

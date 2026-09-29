@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import products from '../data/products';
+import { ArrowRight, Check } from 'lucide-react';
 
 function Products() {
   return (
@@ -82,7 +83,12 @@ function Products() {
                       key={item}
                       className="flex items-start gap-2 text-sm text-[#17221D]"
                     >
-                      <span className="mt-1 text-[#D9A441]">◆</span>
+                      <Check
+                        size={15}
+                        strokeWidth={2}
+                        aria-hidden="true"
+                        className="mt-0.5 shrink-0 text-[#D9A441]"
+                      />
 
                       <span>{item}</span>
                     </li>
@@ -109,9 +115,12 @@ function Products() {
                     ? 'Request a Quote'
                     : 'Discuss This Product'}
 
-                  <span className="transition-transform duration-300 group-hover/link:translate-x-1">
-                    →
-                  </span>
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover/link:translate-x-1"
+                  />
                 </a>
               </div>
             </motion.article>
@@ -141,7 +150,12 @@ function Products() {
             className="mt-6 inline-flex shrink-0 items-center gap-2 rounded-full bg-[#D9A441] px-6 py-3.5 text-sm font-semibold text-[#12372A] transition-all duration-300 hover:bg-[#E5B653] lg:mt-0"
           >
             Request a Quote
-            <span>→</span>
+            <ArrowRight
+              size={16}
+              strokeWidth={2}
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
           </a>
         </motion.div>
       </div>

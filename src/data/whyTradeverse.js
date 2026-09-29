@@ -1,3 +1,12 @@
+import {
+  ShieldCheck,
+  BadgeCheck,
+  Handshake,
+  Globe2,
+  Truck,
+  PackageCheck,
+} from "lucide-react";
+
 const whyTradeverse = [
   {
     id: 1,
@@ -5,7 +14,7 @@ const whyTradeverse = [
     title: "Reliable Sourcing",
     description:
       "We work with reliable supplier networks in India to source products according to buyer requirements and market needs.",
-    icon: "◎",
+    icon: ShieldCheck,
   },
   {
     id: 2,
@@ -13,7 +22,7 @@ const whyTradeverse = [
     title: "Quality Focus",
     description:
       "Product specifications, quality coordination, packaging requirements and pre-shipment checks are handled with careful attention.",
-    icon: "✦",
+    icon: BadgeCheck,
   },
   {
     id: 3,
@@ -21,7 +30,7 @@ const whyTradeverse = [
     title: "Competitive Sourcing",
     description:
       "Our sourcing network helps us coordinate commercially suitable products and solutions for international B2B requirements.",
-    icon: "◇",
+    icon: Handshake,
   },
   {
     id: 4,
@@ -29,7 +38,7 @@ const whyTradeverse = [
     title: "Export Documentation",
     description:
       "We coordinate the documentation required for export transactions based on the product, destination and agreed trade requirements.",
-    icon: "▤",
+    icon: Globe2,
   },
   {
     id: 5,
@@ -37,7 +46,7 @@ const whyTradeverse = [
     title: "Efficient Logistics",
     description:
       "From packaging and shipment coordination to destination requirements, we work to keep the export process organized and efficient.",
-    icon: "↗",
+    icon: Truck,
   },
   {
     id: 6,
@@ -45,7 +54,7 @@ const whyTradeverse = [
     title: "Long-Term Partnerships",
     description:
       "We focus on building dependable relationships with importers, distributors, wholesalers and other international buyers.",
-    icon: "∞",
+    icon: PackageCheck,
   },
 ];
 
