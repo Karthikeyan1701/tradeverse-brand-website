@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <Navbar />
 
-      <main>
+      <main className="pt-20">
         <Hero />
         <About />
         <Products />
